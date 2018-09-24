@@ -10,7 +10,7 @@ public class App {
 
 	@RequestMapping("/")
 	String home() {
-		return "Hello World!";
+		return "Veldig enkel Springboot App, kjører på Azure og repo på Githøbb";
 	}
 
 	public static void main(String[] args) throws Exception {
