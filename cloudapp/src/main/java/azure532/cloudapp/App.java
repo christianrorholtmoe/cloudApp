@@ -11,6 +11,10 @@ public class App {
 	@RequestMapping("/")
 	String home() {
 		return "Veldig enkel Springboot App, kjører på Azure og repo på Githøbb";
+		
+		//TODO: connection til azure kø
+		
+		
 	}
 
 	public static void main(String[] args) throws Exception {
