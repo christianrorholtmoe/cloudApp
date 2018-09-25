@@ -36,5 +36,13 @@
 		<artifactId>spring-boot-starter-web</artifactId>
 	</dependency>
   
+  <!-- https://mvnrepository.com/artifact/com.microsoft.azure/azure-storage -->
+<dependency>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>azure-storage</artifactId>
+    <version>8.0.0</version>
+</dependency>
+  
+  
   </dependencies>
 </project>
