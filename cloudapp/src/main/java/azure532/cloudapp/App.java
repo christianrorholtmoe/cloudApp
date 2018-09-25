@@ -19,7 +19,7 @@ public class App {
 	
 	@RequestMapping("/add")
 	String add() {
-		qController.addMessageToCloudQueue("Hei! ");
+		qController.addMessageToCloudQueue("Hei! " + Math.round(Math.random()*100));
 		return "La til element ";
 	}
 	
