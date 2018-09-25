@@ -37,9 +37,7 @@ public class CloudQueueController {
 		    // Output the stack trace.
 		    e.printStackTrace();
 		}
-	
-
-		
+			
 	}
 	
 	//get message from queue
