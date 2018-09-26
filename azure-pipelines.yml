@@ -11,8 +11,10 @@ variables:
 
 steps:
 - script: docker build -f cloudapp/Dockerfile -t $(imageName) .
+
+  displayName: 'docker build - ferdig'
+
 - script: docker login -u $(acrId) -p $(acrPw) $(acrId).azurecr.io
 - script: docker tag $(imageName) $(acrId)/$(imageName)
 - script: docker push $(acrId)/$(imageName)
-
-  displayName: 'docker build'
+  displayName: 'docker push - ferdig'
