@@ -15,6 +15,6 @@ steps:
   displayName: 'docker build - ferdig'
 
 - script: docker login -u $(acrId) -p $(acrPw) $(acrId).azurecr.io
-- script: docker tag $(imageName) $(acrId)/$(imageName)
+- script: docker tag $(imageName) $(acrId).azurecr.io/$(imageName)
 - script: docker push $(acrId).azurecr.io/$(imageName)
   displayName: 'docker push - ferdig'
