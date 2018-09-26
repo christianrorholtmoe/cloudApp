@@ -20,7 +20,7 @@ public class App {
 	@RequestMapping("/add")
 	String add(@RequestParam(value = "msg", defaultValue = "Ingen") String message) {
 		qController.addMessageToCloudQueue(message);
-		return "La til element " + message;
+		return "La til køelement " + message;
 	}
 	
 	@RequestMapping("/get")

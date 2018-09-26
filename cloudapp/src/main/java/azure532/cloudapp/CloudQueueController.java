@@ -51,7 +51,7 @@ public class CloudQueueController {
 				queue.deleteMessage(message);
 				return returnMessage;
 			}else {
-				return "Queue " + queue.getName() + " er tom";
+				return "Køen " + queue.getName() + " er tom - fyll opp! ";
 			}
 		} catch (StorageException e) {
 			// TODO Auto-generated catch block
