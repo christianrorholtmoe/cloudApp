@@ -18,9 +18,9 @@ public class App {
 	}
 	
 	@RequestMapping("/add")
-	String add() {
-		qController.addMessageToCloudQueue("Hei! " + Math.round(Math.random()*100));
-		return "La til element ";
+	String add(@RequestParam(value = "msg", defaultValue = "Ingen") String message) {
+		qController.addMessageToCloudQueue(message);
+		return "La til element " + message;
 	}
 	
 	@RequestMapping("/get")
