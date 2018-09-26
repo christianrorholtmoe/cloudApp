@@ -10,10 +10,9 @@ variables:
   imageName: 'cloudapp:$(build.buildId)'
 
 steps:
-- script: |
-docker build -f cloudapp/Dockerfile -t $(imageName) .
-	docker login -u $(acrId) -p $(acrPw) $(acrd).azurecr.io
-    docker tag $(imageName) $(dockerId)/$(imageName)
-    docker push $(dockerId)/$(imageName)
+- script: docker build -f cloudapp/Dockerfile -t $(imageName) .
+- script: docker login -u $(acrId) -p $(acrPw) $(acrd).azurecr.io
+- script: docker tag $(imageName) $(acrId)/$(imageName)
+- script: docker push $(acrId)/$(imageName)
 
   displayName: 'docker build'
