@@ -7,7 +7,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 variables:
-  imageName: 'restfulcloudapp:$(build.buildId)'
+  imageName: 'restfulcloudapp'
 
 steps:
 - script: docker build -f cloudapp/Dockerfile -t $(imageName) .
